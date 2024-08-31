@@ -1,4 +1,7 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10, 10)
-# YOUR CODE HERE
+#for positivenumber in random
+    print("")
+if number = 0:
+    print ("{number} is zero")
