@@ -7,4 +7,4 @@ def pow(a, b):
         b = -b
     for _ in range(b):
         result *= a
-    return f"{result:.2f}"
+    return int(result)
