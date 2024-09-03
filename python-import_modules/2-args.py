@@ -9,6 +9,6 @@ if __name__ == "__main__":
     if num_args == 0:
         print("Number of argument(s): 0.")
     else:
-        print(f"Number of argument(s): {num_args} argument{'s'if num_args > 1 else ''}:")
+        print(f"{num_args} argument{'s'if num_args > 1 else ''}:")
         for i, arg in enumerate(argv, start=1):
             print(f"{i}: {arg}")
