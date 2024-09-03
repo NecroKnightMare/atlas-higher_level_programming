@@ -13,3 +13,5 @@ def roman_to_int(roman_string):
         else:
             total += value
             val_before = value
+    
+    return total
