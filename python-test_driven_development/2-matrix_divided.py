@@ -4,12 +4,9 @@ divide a matrix
 """
 def matrix_divided(matrix, div):
     """
-    Arg:
+    Args:
         matrix: list of ints and floats
         div: divide
-
-    Returns:
-        list of floats divided to .2
 
     Raises:
         TypeError: if not ints or floats
@@ -17,10 +14,14 @@ def matrix_divided(matrix, div):
         TypeError: if divisible is not number
         ZeroDivisionError: divisible by 0
 
+    Returns:
+        list of floats divided to .2
+
     """
     if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
+    for row in matrix:
     if not all(isinstance(element, (int, float)) for element in row):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
@@ -37,11 +38,3 @@ def matrix_divided(matrix, div):
     new_matrix = [[round(element / div , 2) for element in row] for row in matrix]
 
     return new_matrix
-
-matrix = [
-        [1, 2, 3],
-        [4, 5, 6]
-]
-print(matrix_divided(matrix, 3))
-print(matrix)
-
