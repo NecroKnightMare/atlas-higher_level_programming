@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""
+divides matrix by a given divisor
+"""
+
 def matrix_divided(matrix, div):
     """
     Args:
@@ -25,7 +29,7 @@ row in matrix):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
     row_length = len(matrix[0])
-    if not all(len(row) == row_length for row in matrix):
+    if any(len(row) != row_length for row in matrix):
         raise TypeError("Each row of the matrix must have the same size")
 
     if not isinstance(div, (int, float)):
