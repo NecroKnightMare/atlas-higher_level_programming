@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-divide a matrix
-"""
+
 def matrix_divided(matrix, div):
     """
     Args:
@@ -18,7 +16,8 @@ def matrix_divided(matrix, div):
         list of floats divided to .2
 
     """
-    if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
+    if not isinstance(matrix, list) or not all(isinstance(row, list) for
+row in matrix):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
     for row in matrix:
