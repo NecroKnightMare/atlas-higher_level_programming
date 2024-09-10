@@ -5,18 +5,17 @@ Square mmodule
 """
 
 class Square:
-
-    """
-    updaate attribute with value
-    """
-    @property
     def __init__(self, size=0):
         self.__size = size
 
-    @size.setter
+    @property
     def size(self):
         return self.__size
 
+    """
+    size includes return value of area
+    """
+    @size.setter
     def size(self, value):
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
