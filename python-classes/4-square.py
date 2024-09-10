@@ -2,9 +2,18 @@
 
 """
 Square mmodule
+
 """
 
 class Square:
+    """
+    Attributes:
+        _size (int): size of square
+
+    Methods:
+        size: gets or sets size of square
+        area: calcs area of square
+"""
     def __init__(self, size=0):
         self.__size = size
 
@@ -12,9 +21,6 @@ class Square:
     def size(self):
         return self.__size
 
-    """
-    size includes return value of area
-    """
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
