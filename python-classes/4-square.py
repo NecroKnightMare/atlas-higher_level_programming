@@ -9,9 +9,11 @@ class Square:
     """
     updaate attribute with value
     """
+    @property
     def __init__(self, size=0):
         self.__size = size
 
+    @size.setter
     def size(self):
         return self.__size
 
