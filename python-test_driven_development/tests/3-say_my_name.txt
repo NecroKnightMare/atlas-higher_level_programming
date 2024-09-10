@@ -1,0 +1,22 @@
+# Test with both first and last names
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+# Test with only first name
+>>> say_my_name("Bob")
+My name is Bob 
+
+# Test with non-string first name
+>>> try:
+...     say_my_name(12, "White")
+... except TypeError as e:
+...     print(e)
+first_name must be a string
+
+# Test with non-string last name
+>>> try:
+...     say_my_name("John", 123)
+... except TypeError as e:
+...     print(e)
+last_name must be a string
+
