@@ -1,27 +1,28 @@
 #!/usr/bin/python3
 
-def add_integers(a, b=98):
-    """
-    adds integers
+"""
+add two int or floats
+"""
 
-    Args:
-        a: int float 98
-        b: int float 98
-    
+def add_integer(a, b=98):
+    """
+    Arg:
+        a: firt number
+        b: second number
 
     Returns:
-        int: sum of a and b
+        sum of a and b
 
     Raises:
-        TypeError for non integer
-   """
+        TE if not integers
+    """
 
-    a_int = int(a)
-    b_int = int(b)
+    if not isinstance(a, (int, float)):
+        raise TypeError("a must be an integer")
+    if not isinstance(b, (int, float)):
+        raise TypeError("b must be an integer")
 
-    if not isinstance(a_int, (int, float)) or not isinstance(b_int(int, float)):
-        raise TypeError("a must be an integer or b must be an integer")
+    a = int(a)
+    b = int(b)
 
-    result = a_int + b_int
-
-    return = result
+    return a + b
