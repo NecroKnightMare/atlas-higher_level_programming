@@ -22,7 +22,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([9]), 9)
 
     def test_empty_list(self):
-        self.assertIsNone(max_integer([])
+        self.assertIsNone(max_integer([]))
 
     def test_none(self):
         with self.assertRaises(TypeError):
