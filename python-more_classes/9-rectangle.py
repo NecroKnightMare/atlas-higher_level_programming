@@ -82,4 +82,6 @@ class Rectangle:
         return rect_2
     @classmethod
     def square(cls, size=0):
+        if size < 0:
+            raise ValueError("width must be >= 0")
         return cls(size,size)
