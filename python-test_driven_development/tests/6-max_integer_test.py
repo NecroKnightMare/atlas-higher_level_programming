@@ -5,10 +5,6 @@ unittests
 import unittest
 
 class TestMaxInteger(unittest.TestCase):
-       """
-    Parameters:
-        unittest.TestCase: tests for lists to find the max int
-    """
     def test_positive_integers(self):
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
 
