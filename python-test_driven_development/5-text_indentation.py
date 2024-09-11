@@ -18,7 +18,7 @@ def text_indentation(text):
 
     while i < len(text):
         result += text[i]
-        if text[i] in special_chars:
+        if text[i] in ".?:":
             result += "\n\n"
             i =+ 1
             while i < len(text) and text[i] == ' ':
