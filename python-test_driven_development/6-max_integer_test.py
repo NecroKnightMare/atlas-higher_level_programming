@@ -3,7 +3,7 @@
 unittests for max integer
 """
 import unittest
-from 6_max_integer import max_integer
+from max_integer_6 import max_integer
 
 class TestMaxInteger(unittest.TestCase):
        """
