@@ -23,9 +23,9 @@ def add_integer(a, b=98):
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
 
-    if isinstance(a, float) and (a > float('inf') or a < float('-inf')):
+    if isinstance(a, float) and (a > 1e308 or a < -1e308):
         raise OverflowError("a is too large")
-    if isinstance(b, float) and (b > float('inf') or b < float('-inf')):
+    if isinstance(b, float) and (b > 1e308 or b < -1e308):
         raise OverflowError("b is too large")
 
     a = int(a)
