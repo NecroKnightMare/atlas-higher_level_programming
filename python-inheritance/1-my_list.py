@@ -1,3 +1,10 @@
 #!/usr/bin/python3
-def print_sorted(self):
-    return dir(obj)
+"""
+my list class
+"""
+class MyList:
+    """
+    prints sorted list
+    """
+    def print_sorted(self):
+        print(sorted(self))
