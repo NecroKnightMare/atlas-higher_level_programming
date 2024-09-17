@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-import json
 """
 json file mod
 """
 
 
+import json
 def load_from_json_file(filename):
     """
     load from json
