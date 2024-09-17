@@ -2,7 +2,6 @@
 """
 json mod
 """
-import json
 
 
 def class_to_json(obj):
