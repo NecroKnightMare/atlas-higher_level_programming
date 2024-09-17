@@ -23,7 +23,7 @@ class Student:
             return self.__dict__
         else:
             return {attr: getattr(self, attr) for attr in attrs}
-    
+
     def reload_from_json(self, json):
         for key, value in json.items():
             setattr(self, key, value)
