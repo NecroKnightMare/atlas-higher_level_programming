@@ -42,3 +42,4 @@ def __init__(self, width, height):
 
     def __str__(self):
         return f"[Rectangle] {self.__width}/{self.__height}"
+print(issubclass(Rectangle, BaseGeometry))
