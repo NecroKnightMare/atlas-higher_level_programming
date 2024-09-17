@@ -4,7 +4,7 @@ class student
 """
 
 
-class Student(self):
+class Student:
     """
     Attr:
         first: name
