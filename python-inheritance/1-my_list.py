@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-def lookup(self):
+def print_sorted(self):
     return dir(obj)
