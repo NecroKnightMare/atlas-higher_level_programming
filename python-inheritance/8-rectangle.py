@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 class basegeometry
+class rectangle
 """
 
 
@@ -24,9 +25,14 @@ class BaseGeometry:
             raise ValueError("{name} must be greater than 0")
 ~                                                              
 class Rectangle(BaseGeometry):
+    """
+    initiation of
+    Parameters:
+        width
+        height
+    """
     def __init__(self, width, height):
         self.integer__validator("width", width)
         self.integer__validator("height", height)
         self.__width = width
         self.__height = height
-
