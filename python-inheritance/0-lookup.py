@@ -2,6 +2,8 @@
 """
 function  to print an obj list
 """
+
+
 def lookup(obj):
     """
     returns a list object
