@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+ret a list object
+"""
 def lookup(obj):
     try:
         return sorted(dir(obj))
