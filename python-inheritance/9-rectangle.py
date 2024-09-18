@@ -23,6 +23,8 @@ class BaseGeometry:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
+
+
 """
 class rectangle
 """
@@ -41,5 +43,6 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         return f"[Rectangle] {self.__width}/{self.__height}"
+
     def area(self):
         return self.__width * self.__height
