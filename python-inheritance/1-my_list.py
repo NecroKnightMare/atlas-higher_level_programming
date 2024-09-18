@@ -2,7 +2,7 @@
 """
 my list class
 """
-class MyList:
+class MyList(list):
     """
     prints sorted list
     """
