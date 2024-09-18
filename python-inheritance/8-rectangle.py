@@ -39,7 +39,3 @@ def __init__(self, width, height):
     self.integer_validator("height", height)
     self.__width = width
     self.__height = height
-
-    def __str__(self):
-        return f"[Rectangle] {self.__width}/{self.__height}"
-print(issubclass(Rectangle, BaseGeometry))
