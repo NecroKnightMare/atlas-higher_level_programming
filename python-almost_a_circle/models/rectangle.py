@@ -96,4 +96,4 @@ class Rectangle(Base):
         print # repr rectangle
         """
         for _ in range(self.height):
-            print("#" * self.height)
+            print("#" * self.width)
