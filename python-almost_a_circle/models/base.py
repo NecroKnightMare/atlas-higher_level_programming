@@ -12,9 +12,9 @@ Returns:
 
 
 class Base:
-"""
-Base class thatll be the root class for other files
-"""
+    """
+    Base class thatll be the root class for other files
+    """
 
     __nb_objects = 0
 
