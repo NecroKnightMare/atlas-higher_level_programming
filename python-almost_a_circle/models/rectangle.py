@@ -15,11 +15,10 @@ class Rectangle(Base):
         height
         x
         y
-        area: width and height
+        area
 
     Returns:
-        rectangle int values and area
-
+        rectangle int: values and area of rectangle
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
@@ -77,4 +76,17 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+    """
+    gets area of a rectangle
+
+    Attributes:
+        width
+        height
+        x
+        y
+        area
+
+    Returns:
+        rectangle int: values and area of rectangle
+    """
         return self.width * self.height
