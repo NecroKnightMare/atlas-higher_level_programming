@@ -1,16 +1,24 @@
 #!/usr/bin/python3
 """
-
+Rectangle class thatll pull from Base class
 """
 from models.base import Base
 
 
 class Rectangle(Base):
     """
+    Attributes:
+        width
+        height
+        x
+        y
+
+    Returns:
+        rectangle values
 
     """
     def __init__(self, width, height, x=0, y=0, id=None):
-    def super().__init__(id)
+        def super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
