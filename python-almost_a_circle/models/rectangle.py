@@ -90,7 +90,7 @@ class Rectangle(Base):
             rectangle int: values and area of rectangle
         """
         return self.width * self.height
-    
+
     def display(self):
         """
         print # repr rectangle
