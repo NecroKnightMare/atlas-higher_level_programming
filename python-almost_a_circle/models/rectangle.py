@@ -12,9 +12,10 @@ class Rectangle(Base):
         height
         x
         y
+        area
 
     Returns:
-        rectangle values
+        rectangle values and area
 
     """
     def __init__(self, width, height, x=0, y=0, id=None):
