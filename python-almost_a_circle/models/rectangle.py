@@ -91,6 +91,11 @@ class Rectangle(Base):
         """
         return self.width * self.height
 
+    def update(self, *args):
+        attributes = ['id', 'width', 'height', 'x', 'y']
+        for attr, value in zip(attributes, args):
+            setattr(self, attr, value)
+
     def display(self):
         """
         print # repr rectangle
