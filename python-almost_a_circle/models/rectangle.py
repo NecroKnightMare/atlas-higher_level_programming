@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 Rectangle class thatll pull from Base class
+and gives an area
 """
 from models.base import Base
 
@@ -12,7 +13,7 @@ class Rectangle(Base):
         height
         x
         y
-        area
+        area: width and height
 
     Returns:
         rectangle values and area
