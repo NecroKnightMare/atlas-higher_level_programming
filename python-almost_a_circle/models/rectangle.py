@@ -91,7 +91,7 @@ class Rectangle(Base):
         """
         return self.width * self.height
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         public method that assigns args to each attribute
         """
@@ -100,7 +100,7 @@ class Rectangle(Base):
             for attr, value in zip(attributes, args):
                 setattr(self, attr, value)
         else:
-            for key, valuein kwargs.items():
+            for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
         
