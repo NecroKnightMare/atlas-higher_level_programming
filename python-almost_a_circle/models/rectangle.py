@@ -8,6 +8,8 @@ from models.base import Base
 
 class Rectangle(Base):
     """
+    gets area of a rectangle
+
     Attributes:
         width
         height
@@ -16,7 +18,7 @@ class Rectangle(Base):
         area: width and height
 
     Returns:
-        rectangle values and area
+        rectangle int values and area
 
     """
     def __init__(self, width, height, x=0, y=0, id=None):
