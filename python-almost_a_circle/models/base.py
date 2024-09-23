@@ -19,7 +19,8 @@ Base class thatll be the root class for other files
     __nb_objects = 0
 
     def __init__(self, id=None):
-        if id is None:
-            return id
+        if id is not None:
+            self.id = id
         else:
-            id = None
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
