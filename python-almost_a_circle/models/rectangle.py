@@ -95,10 +95,15 @@ class Rectangle(Base):
         """
         public method that assigns args to each attribute
         """
-        attributes = ['id', 'width', 'height', 'x', 'y']
-        for attr, value in zip(attributes, args):
-            setattr(self, attr, value)
-
+        if args:
+            attributes = ['id', 'width', 'height', 'x', 'y']
+            for attr, value in zip(attributes, args):
+                setattr(self, attr, value)
+        else:
+            for key, valuein kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
+        
     def display(self):
         """
         print # repr rectangle
