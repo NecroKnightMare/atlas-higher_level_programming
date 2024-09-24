@@ -8,6 +8,7 @@ Parameters:
 Returns:
     id
 """
+import json
 
 
 class Base:
