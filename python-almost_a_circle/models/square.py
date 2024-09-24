@@ -9,11 +9,13 @@ Square class that imports rectangle
 
 class Square(Rectangle):
     """
+    square class inherits from rect
+
     Attributes:
-        size
-        x
-        y
-        id
+        size: size of square
+        x: x value
+        y: y value
+        id: id of square
 
     Method:
         string
@@ -23,6 +25,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """
+        Method:
+            __str__: string representation of square
         Returns:
             string
         """
