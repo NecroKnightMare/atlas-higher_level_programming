@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-from models.rectangle import Rectangle
-
 """
 Module that def Square class that inherits rectangle
 """
+
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -16,10 +16,8 @@ class Square(Rectangle):
         x: x value
         y: y value
         id: id is None
-
-    Method:
-        string
     """
+    
     def __init__(self, size, x=0, y=0, id=None):
         """
         inits Square instance
