@@ -52,6 +52,7 @@ class Square(Rectangle):
         """
         Method to assign arguments to attributes
         """
+
         if args:
             attributes = ['id', 'size', 'x', 'y']
             for attr, value in zip(attributes, args):
@@ -66,6 +67,7 @@ class Square(Rectangle):
         """
         Method to return square as a dictionary
         """
+
         return {
                 'id': self.id,
                 'size': self.size,
@@ -80,4 +82,5 @@ class Square(Rectangle):
         Returns:
             string
         """
+
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
