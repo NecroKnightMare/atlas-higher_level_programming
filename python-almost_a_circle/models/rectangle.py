@@ -103,7 +103,7 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
-        
+
     def display(self):
         """
         print # repr rectangle
@@ -125,5 +125,6 @@ class Rectangle(Base):
                 'x': self.x,
                 'y': self.y
                 }
-    def __str__(self):
+
+        def __str__(self):
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
