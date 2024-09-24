@@ -17,7 +17,6 @@ class Square(Rectangle):
         y: y value
         id: id is None
     """
-    
     def __init__(self, size, x=0, y=0, id=None):
         """
         inits Square instance
@@ -26,8 +25,7 @@ class Square(Rectangle):
             size: size of sq
             x: int val
             y: int val
-            id: id is None
-            
+            id: id is None  
         """
         super().__init__(size, size, x, y, id)
 
