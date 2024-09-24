@@ -25,7 +25,7 @@ class Square(Rectangle):
             size: size of sq
             x: int val
             y: int val
-            id: id is None  
+            id: id is None
         """
         super().__init__(size, size, x, y, id)
 
