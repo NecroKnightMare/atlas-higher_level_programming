@@ -66,6 +66,19 @@ class Base:
                 file.write(cls.to_json_string(list_dicts))
 
     @classmethod
+    def load_from_file(cls):
+        """
+        class method that ret a list of instances
+        """
+        filename = f"{cls.__name__}.json"
+        if not os.path.exists(filename):
+            return []
+
+        with open(filename, 'r') as file:
+            json_string = file.read()
+            list_dicts = cls.from_json_string(json_string)
+            return [cls.create(**d) for d in list_dicts]
+    @classmethod
     def create(cls, **dictionary):
         """
         c method creates dummy instance
