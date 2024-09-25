@@ -11,6 +11,7 @@ Returns:
 import json
 import os
 
+
 class Base:
     """
     Base class thatll be the root class for other files
@@ -78,6 +79,7 @@ class Base:
             json_string = file.read()
             list_dicts = cls.from_json_string(json_string)
             return [cls.create(**d) for d in list_dicts]
+    
     @classmethod
     def create(cls, **dictionary):
         """
