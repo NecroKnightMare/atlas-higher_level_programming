@@ -1,1 +1,2 @@
-SELECT * DATABASES; -- list all databases in mysql
+-- list all databases in mysq
+SELECT * DATABASES;
