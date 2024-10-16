@@ -13,7 +13,7 @@ def fetch_cities_by_state(username, password, database):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    cities = session.query(City).join(State).order_by(City.id.asc()).all()
+    cities = session.query(City).join(State, City.state_id == State.id).order_by(City.id.asc()).all()
     for city in cities:
         print(f"{city.state.name}: ({city.id}) {city.name}")
 
