@@ -9,7 +9,8 @@ import sys
 def display_states(username, password, database):
     db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = LIKE '{}' ORDER BY id ASC".format(state_name))
+    parameters = "SELECT * FROM states WHERE name = LIKE '{}' ORDER BY id ASC".format(state_name)
+    cursor.execute(parameters)
     states = cursor.fetchall()
     for state in states:
         print(state)
