@@ -18,4 +18,4 @@ def list_states_starting_with_N(username, password, database, state_name):
 
 
 if __name__ == "__main__":
-    list_states_starting_with_N(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    display_states(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
