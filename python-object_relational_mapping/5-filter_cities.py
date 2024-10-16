@@ -17,8 +17,8 @@ def list_cities_by_state(username, password, database, state_name):
         """
     cursor.execute(query, (state_name,))
     cities = cursor.fetchall()
-    city_name = [city[0] for city in cities]
-    print(", ".join(city_name))
+    city_names = [city[0] for city in cities]
+    print(", ".join(city_names))
     cursor.close()
     db.close()
 
