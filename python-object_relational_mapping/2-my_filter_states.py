@@ -19,4 +19,4 @@ def display_states(username, password, database, state_name):
 
 
 if __name__ == "__main__":
-    display_states(sys.argv[1], sys.argv[2], sys.argv[3])
+    display_states(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
