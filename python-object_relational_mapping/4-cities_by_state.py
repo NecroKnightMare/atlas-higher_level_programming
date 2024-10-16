@@ -8,7 +8,10 @@ import sys
 def list_cities(username, password, database):
     db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM cities ORDER BY id ASC")
+    cursor.execute("SELECT cities.id, cities.name, states.name
+            FROM cities
+            Join states ON cities.state_id = states.id
+            ORDER BY id ASC")
     cities = cursor.fetchall()
     for city in cities:
         print(city)
