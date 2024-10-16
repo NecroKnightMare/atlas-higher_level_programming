@@ -6,7 +6,7 @@ import MySQLdb
 import sys
 
 
-def display_states(username, password, database):
+def display_states(username, password, database, state_name):
     db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
     cursor = db.cursor()
     parameters = "SELECT * FROM states WHERE name = LIKE '{}' ORDER BY id ASC".format(state_name)
