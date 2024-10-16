@@ -2,7 +2,8 @@
 """
 prints all City objects from usa db
 """
-import sys import argv
+import sys
+import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
