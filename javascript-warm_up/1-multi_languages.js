@@ -1,8 +1,10 @@
 #!/usr/bin/node
 // using let instead of const
-let first = 'C is fun';
-let second = 'Python is cool';
-let third = 'JavaScript is amazing';
+// checker wants const due to the inability let
+// has to reassign values
+const first = 'C is fun';
+const second = 'Python is cool';
+const third = 'JavaScript is amazing';
 console.log(first);
 console.log(second);
 console.log(third);
