@@ -1,6 +1,5 @@
 #!/usr/bin/node
 // 
-const { resolveMx } = require('dns');
 const process = require('process');
 const arg = process.argv[2];
 const size = parseInt(arg);
