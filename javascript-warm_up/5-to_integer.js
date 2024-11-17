@@ -4,7 +4,7 @@ const process = require('process');
 const arg = process.argv[2];
 const stringToInt = parseInt(arg);
 if (!isNaN(stringToInt)) {
-console.log('My number: <first argument converted in integer></first>');
+console.log('My number:', stringToInt);
 } else {
 console.log('Not a number');
 }
