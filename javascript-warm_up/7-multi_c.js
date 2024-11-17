@@ -8,4 +8,3 @@ while (!isNaN(stringToInt)) {
   console.log(stringToInt, x);
 }
 console.log('Missing number of occurrences');
-
