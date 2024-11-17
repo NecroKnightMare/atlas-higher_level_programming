@@ -7,9 +7,10 @@ if (isNaN(size)) {
     console.log('Missing number of occurrences');
   } else {
     for (let row = 0; row < size; row++) {
-      console.log('x', row);
+      let line = '';
       for (let col = 0; col < size; col++) {
-        console.log('x', col);
+        line += 'x';
     }
+    console.log(line);
   }
 }
