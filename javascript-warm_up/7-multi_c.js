@@ -8,5 +8,5 @@ if (isNaN(stringToInt)) {
 } else {
   for (let x = 0; x < stringToInt; x++) {
     console.log('C is fun');
-}
+  }
 }
