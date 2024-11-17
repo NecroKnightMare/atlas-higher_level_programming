@@ -1,3 +1,5 @@
 #!/usr/bin/node
 // empty rectangle class
-class Rectangle {}
+class Rectangle {
+}
+const instance = new Rectangle();
