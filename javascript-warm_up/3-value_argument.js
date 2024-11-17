@@ -3,7 +3,7 @@
 const process = require('process');
 if (process.argv[1]) {
     console.log('Argument found');
-    console.log(process.argv);
+    console.log(process.argv[1]);
 }
 else if (process.argv[2]) {
     console.log('Arguments found');
