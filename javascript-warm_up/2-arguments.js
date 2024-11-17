@@ -1,8 +1,10 @@
 #!/usr/bin/node
-// passing argv as value to print if else conditions
-let arg = process.argv;
-
-if arg:
+// passing process as value to print if else conditions
+const process = require('process');
+if (process.argv.length > 2) {
     console.log('Argument found');
-else:
+    console.log(process.argv);
+}
+else {
     console.log('No argument');
+}
