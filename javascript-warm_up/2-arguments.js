@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // passing argv as value to print if else conditions
-let arg = process.argv
+let arg = process.argv;
 
 if arg:
     console.log('Argument found');
