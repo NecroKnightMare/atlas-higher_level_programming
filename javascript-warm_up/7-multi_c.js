@@ -4,8 +4,8 @@ const process = require('process');
 const arg = process.argv[2];
 const x = stringToInt * x;
 const stringToInt = parseInt(arg);
-if (!isNaN(stringToInt)) {
+while (!isNaN(stringToInt)) {
   console.log(stringToInt, x);
-} else {
-  console.log('Missing number of occurrences');
 }
+console.log('Missing number of occurrences');
+
