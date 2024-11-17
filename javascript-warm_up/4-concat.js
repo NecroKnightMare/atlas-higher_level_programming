@@ -15,4 +15,5 @@ if (process.argv === 2) {
   const arg3 = 'is';
   console.log(arg1, arg3, arg2);
 } else {
-  console.log('No argument');}
+  console.log('No argument');
+}
