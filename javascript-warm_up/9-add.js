@@ -9,5 +9,5 @@ const arg2 = parseInt(process.argv[3]);
 if (isNaN(arg1) || isNaN(arg2)) {
     console.log('NaN');
 } else {
-    console.log(add);
+    console.log(arg1 + arg2);
 }
