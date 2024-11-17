@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// 
+// print square with row and col showing x
 const process = require('process');
 const arg = process.argv[2];
 const size = parseInt(arg);
