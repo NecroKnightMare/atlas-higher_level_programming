@@ -1,7 +1,10 @@
 #!/usr/bin/node
 // prints array of strings in order with while loop
+// will increment to avoid infinite loop
 const process = require('process');
 const arg = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-while (arg) {
-  console.log(arg[0], arg[1], arg[2]);
+let index = 1;
+while (index < arg.length) {
+  console.log(arg[index]);
+  index++;
 } 
