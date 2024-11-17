@@ -3,7 +3,7 @@
 
 const process = require('process');
 
-if (process.argv.length > 4) {
+if (process.argv == 2) {
     const arg1 = process.argv[2];
     const arg2 = process.argv[3];
     const arg3 = "is"
