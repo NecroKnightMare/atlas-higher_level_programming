@@ -8,7 +8,7 @@ class Square extends Rectangle {
   }
 }
 
-charprint (c) {
+charprint (c); {
   if (c === undefined) {
     console.log('X');
   }
