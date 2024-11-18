@@ -1,16 +1,16 @@
 #!/usr/bin/node
-// square class that inherits from Rectangle
-// const Square = require('./5-square.js');
+// square class that inherits from file 5 Sq
+// made function and extended class, charprint is in the class
+const Square = require('./5-square.js');
 
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
+class SquareChar extends Square {
+  charprint (c) {
+    if (c === undefined) {
+      c = 'X';
+    }
+    for (let i = 0; i < this.height; i++){
+      console.log(c.repeat(this.width));
+    }
   }
 }
-
-charprint (c); {
-  if (c === undefined) {
-    console.log('X');
-  }
-}
-module.exports = Square;
+module.exports = SquareChar;
