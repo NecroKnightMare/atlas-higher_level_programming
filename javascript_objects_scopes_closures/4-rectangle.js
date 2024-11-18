@@ -13,6 +13,14 @@ class Rectangle {
         console.log('X'.repeat(this.width));
       }
     }
+    
+    rotate () {
+
+    }
+
+    double () {
+        
+    }
   }
   module.exports = Rectangle;
   
