@@ -8,4 +8,9 @@ class Square extends Rectangle {
   }
 }
 
+charprint (c) {
+  if (c === undefined) {
+    console.log('X');
+  }
+}
 module.exports = Square;
