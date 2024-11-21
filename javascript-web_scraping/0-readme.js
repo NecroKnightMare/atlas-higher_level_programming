@@ -8,7 +8,7 @@ fs.readFile(filePath, 'utf-8', (err, data) => {
 // If an error occurred during the reading, print the error object
   if (err) {
   console.error(err);
-    return;
+  return;
   }
-  console.log(data);
+console.log(data);
 });
