@@ -4,7 +4,7 @@ const fs = require('fs');
 // The first argument is the file path
 const filePath = process.argv[2];
 // string
-const phrase = process.argv[3];
+const phrase = process.argv.slice(3).join(' ');
 // The content of the file must be read in utf-8
 fs.writeFile(filePath, 'utf-8', phrase, (err) => {
 // If an error occurred during the reading, print the error object
