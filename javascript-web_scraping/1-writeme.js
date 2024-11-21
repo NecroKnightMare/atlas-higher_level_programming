@@ -11,6 +11,5 @@ fs.writeFile(filePath, phrase, { encoding: 'utf-8' }, (err) => {
 // If an error occurred during the reading, print the error object
   if (err) {
     console.error(err);
-    return;
   }
 });
