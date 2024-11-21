@@ -8,7 +8,7 @@ const url = process.argv[2];
 // The status code must be printed like this: code: <status code>
 request(url, (err, response) => {
   if (err) {
-    console.log(err);
-    console.log(response.statusCode);
+    console.error(err);
   }
+  console.log(response.statusCode);
 });
