@@ -6,11 +6,11 @@
 const request = require('request');
 // https://swapi-api.hbtn.io/api/
 //  endpoint https://swapi-api.hbtn.io/api/films/:id
-const url = process.argv[2];
-
-// request(url, (err, response) => {
-//   if (err) {
-//     console.error(err);
-//   }
-//   console.log('code:', response.statusCode);
-// });
+const movie = process.argv[2];
+const url = 'https://swapi-api.hbtn.io/api/films/:id';
+request(url, (err, response) => {
+  if (err) {
+     console.error(err);
+   }
+   console.log('code:', response.statusCode);
+ });
