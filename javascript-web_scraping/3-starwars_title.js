@@ -12,5 +12,5 @@ request(url, (err, response) => {
   if (err) {
      console.error(err);
    }
-   console.log('code:', response.statusCode);
+   console.log(data.title);
  });
