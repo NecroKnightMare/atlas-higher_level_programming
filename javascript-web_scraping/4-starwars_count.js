@@ -13,8 +13,13 @@ request(movie, (err, response, body) => {
     return;
   }
   const films = JSON.parse(body).results;
-  const wedgeAntilles = films.filter(film =>
-    film.characters.includes(url));
-// grab length of wedge Antilles movies that are present
-  console.log(wedgeAntilles.length);
+  let count = 0;
+
+  films.forEach((film) => {
+    if (film.characters.includes(url)) {
+    count++;
+    }
+  });
+// grab count of wedge Antilles movies that are present
+  console.log(count);
 });
