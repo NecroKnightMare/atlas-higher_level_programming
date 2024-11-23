@@ -3,10 +3,10 @@
 // where the character “Wedge Antilles” is present.
 const request = require('request');
 const movie = process.argv[2];
-// API URL
-const url = `https://swapi-api.hbtn.io/api/people/${character}`;
 // Wedge Antilles character
 const character = '18';
+// API URL
+const url = `https://swapi-api.hbtn.io/api/people/${character}`;
 request(movie, (err, response, body) => {
   if (err) {
     console.error(err);
