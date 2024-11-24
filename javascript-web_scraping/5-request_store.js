@@ -8,14 +8,14 @@ const url = process.argv[2];
 // grab file path to store later in code
 const file = process.argv[3];
 request(url, (err, response, body) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  fs.writeFile(file, body, 'utf-8', (err) => {
     if (err) {
-      console.error(err);
-      return;
+    console.error(err);
+    return;
     }
-    fs.writeFile(file, body, 'utf-8', (err) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
-    });
+  });
 });
