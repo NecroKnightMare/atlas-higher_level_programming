@@ -5,30 +5,33 @@ const request = require('request');
 const url = process.argv[2];
 // The first argument is the API URL:
 // https://jsonplaceholder.typicode.com/todos
-request(url, (err, response, body) => {
+request(url, { json: true }, (err, response, body) => {
   if (err) {
     console.error(err);
     return;
   }
-  try {
-    const tasks = JSON.parse(body).results;
-    const completedTasks = {};
+  // const tasks = JSON.parse(body).results;
+  const completedTasks = {};
 
-    if (!Array.isArray(tasks)) {
-      throw new Error('Error');
-    }
-
-    tasks.forEach((task) => {
-      if (task.completed) {
-        if (completedTasks[task.userId]) {
-        completedTasks[task.userId]++;
-        } else {
-        completedTasks[task.userId] = 1;
-        }
+  body.forEach((task) => {
+    if (task.completed) {
+      const userId = task.userId.toString();
+      if (!completedTasks[userId]) {
+      completedTasks[userId] = 1;
+      } else {
+      completedTasks[userId]++;
       }
-    });
-    console.log(completedTasks);
-  } catch (e) {
-    console.error(e);
-  }
+    }
+  });
+
+  Object.keys(completedTasks).forEach(userId => {
+    if(completedTasks[userId] === 0) {
+      delete completedTasks[userId];
+    }
+  });
+
+  const sortedKeys = Object.keys(completedTasks).sort((a, b) => parseInt(a) - parseInt(b));
+
+  const output = sortedKeys.map(userId => `'${userId}': ${completedTasks[userId]}`).join(',\n');
+  console.log(output);
 });
