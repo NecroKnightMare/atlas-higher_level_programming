@@ -11,7 +11,7 @@ request(url, { json: true }, (err, response, body) => {
     console.error(err);
     return;
   }
-  // const tasks = JSON.parse(body).results;
+  const task = JSON.parse(body).results;
   const completedTasks = {};
 
   body.forEach((task) => {
