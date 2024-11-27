@@ -18,9 +18,8 @@ request(url, (err, response, body) => {
       if (task.completedTasks) {
         if (!completedTasks[task.userId]) {
           completedTasks[task.user.Id] = 1;
-        } else {
-          completedTasks++;
         }
+        completedTasks++;
       }
     });
     console.log(completedTasks);
