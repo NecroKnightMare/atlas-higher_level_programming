@@ -6,15 +6,15 @@ const process = require('process');
 const url = process.argv[2];
 // The first argument is the API URL:
 // https://jsonplaceholder.typicode.com/todos
-request(url, { json: true }, (err, response, body) => {
+request(url, (err, response, body) => {
   if (err) {
     console.error(err);
     return;
   }
-  const task = JSON.parse(body).results;
+  const tasks = JSON.parse(body).results;
   const completedTasks = {};
 
-  body.forEach((task) => {
+  tasks.forEach((task) => {
     if (task.completed) {
       const userId = task.userId.toString();
       if (!completedTasks[userId]) {
