@@ -13,7 +13,7 @@ request(url, (err, response, body) => {
   const tasks = JSON.parse(body);
   const completedTasks = {};
 
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < tasks.length; i++) {
     const task = tasks[i];
     if (task.completed) {
       const userId = task.userId.toString();
