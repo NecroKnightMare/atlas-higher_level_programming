@@ -1,6 +1,7 @@
 #!/usr/bin/node
 // Write a script that computes the number of tasks completed by user id
 const request = require('request');
+const process = require('process');
 // 
 const url = process.argv[2];
 // The first argument is the API URL:
@@ -33,5 +34,5 @@ request(url, { json: true }, (err, response, body) => {
   const sortedKeys = Object.keys(completedTasks).sort((a, b) => parseInt(a) - parseInt(b));
 
   const output = sortedKeys.map(userId => `'${userId}': ${completedTasks[userId]}`).join(',\n');
-  console.log(output);
+  console.log(`{ ${output} }`);
 });
