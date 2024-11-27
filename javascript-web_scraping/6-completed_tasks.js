@@ -10,17 +10,21 @@ request(url, (err, response, body) => {
     console.error(err);
     return;
   }
-  const tasks = JSON.parse(body).results;
-  const completedTasks = {};
+  try {
+    const tasks = JSON.parse(body).results;
+    const completedTasks = {};
 
-  tasks.forEach((task) => {
-    if (task.completed) {
-      if (completedTasks[task.userId]) {
-      completedTasks[task.userId]++;
-      } else {
-      completedTasks[task.userId] = 1;
+    tasks.forEach((task) => {
+      if (task.completed) {
+        if (completedTasks[task.userId]) {
+        completedTasks[task.userId]++;
+        } else {
+        completedTasks[task.userId] = 1;
+        }
       }
-    }
-  });
-  console.log(completedTasks);
+    });
+    console.log(completedTasks);
+  } catch (e) {
+    console.error(e);
+  }
 });
