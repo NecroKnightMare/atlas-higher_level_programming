@@ -1,7 +1,6 @@
 #!/usr/bin/node
 // Write a script that computes the number of tasks completed by user id
 const request = require('request');
-// 
 const url = process.argv[2];
 // The first argument is the API URL:
 // https://jsonplaceholder.typicode.com/todos
@@ -24,7 +23,7 @@ request(url, (err, response, body) => {
     });
     console.log(completedTasks);
   }
-});    
+});
 //   for (let i = 0; i < tasks.length; i++) {
 //     const task = tasks[i];
 //     if (task.completed) {
