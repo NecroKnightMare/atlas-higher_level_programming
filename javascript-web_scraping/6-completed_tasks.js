@@ -17,10 +17,10 @@ request(url, (err, response, body) => {
     if (task.completed) {
       if (completedTasks[task.userId]) {
       completedTasks[task.userId]++;
-    } else {
+      } else {
       completedTasks[task.userId] = 1;
-    }
+      }
     }
   });
-console.log(completedTasks);
+  console.log(completedTasks);
 });
