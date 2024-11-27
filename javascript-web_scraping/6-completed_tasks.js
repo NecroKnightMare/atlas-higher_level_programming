@@ -10,29 +10,42 @@ request(url, (err, response, body) => {
     console.error(err);
     return;
   }
-  const tasks = JSON.parse(body);
-  const completedTasks = {};
+  if (response.statusCode === 200) {
+    const taskList = JSON.parse(body);
+    const completedTasks = {};
 
-  for (let i = 0; i < tasks.length; i++) {
-    const task = tasks[i];
-    if (task.completed) {
-      const userId = task.userId.toString();
-      if (!completedTasks[userId]) {
-      completedTasks[userId] = 1;
-      } else {
-      completedTasks[userId]++;
+    taskList.forEach((task) => {
+      if (task.completedTasks) {
+        if (!completedTasks[task.userId]) {
+          completedTasks[task.user.Id] = 1;
+        } else {
+          completedTasks++;
+        }
       }
-    }
+    });
+    console.log(completedTasks);
   }
+});    
+//   for (let i = 0; i < tasks.length; i++) {
+//     const task = tasks[i];
+//     if (task.completed) {
+//       const userId = task.userId.toString();
+//       if (!completedTasks[userId]) {
+//       completedTasks[userId] = 1;
+//       } else {
+//       completedTasks[userId]++;
+//       }
+//     }
+//   }
 
-  // Object.keys(completedTasks).forEach(userId => {
-  //   if(completedTasks[userId] === 0) {
-  //     delete completedTasks[userId];
-  //   }
-  // });
+//   // Object.keys(completedTasks).forEach(userId => {
+//   //   if(completedTasks[userId] === 0) {
+//   //     delete completedTasks[userId];
+//   //   }
+//   // });
 
-  const sortedKeys = Object.keys(completedTasks).sort((a, b) => parseInt(a) - parseInt(b));
+//   const sortedKeys = Object.keys(completedTasks).sort((a, b) => parseInt(a) - parseInt(b));
 
-  const output = sortedKeys.map(userId => `'${userId}': ${completedTasks[userId]}`).join(', ');
-  console.log(`{ ${output} }`);
-});
+//   const output = sortedKeys.map(userId => `'${userId}': ${completedTasks[userId]}`).join(', ');
+//   console.log(`{ ${output} }`);
+// });
