@@ -17,7 +17,7 @@ request(url, (err, response, body) => {
     taskList.forEach((task) => {
       if (task.completedTasks) {
         if (!completedTasks[task.userId]) {
-          completedTasks[task.user.Id] = 1;
+          completedTasks[task.user.Id] = 0;
         }
         completedTasks++;
       }
