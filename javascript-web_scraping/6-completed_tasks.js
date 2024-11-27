@@ -10,7 +10,7 @@ request(url, (err, response, body) => {
     console.error(err);
     return;
   }
-  const tasks = JSON.parse(body).results;
+  const tasks = JSON.parse(body);
   const completedTasks = {};
 
   for (let i = 0; i < tasks.length; i++) {
