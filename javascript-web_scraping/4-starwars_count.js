@@ -6,7 +6,7 @@ const movie = process.argv[2];
 // Wedge Antilles character
 const character = '18';
 // API URL
-const url = `https://swapi-api.hbtn.io/api/people/${character}`;
+const url = `https://swapi-api.hbtn.io/api/people/${wedgeAntillesId}`;
 request(movie, (err, response, body) => {
   if (err) {
     console.error(err);
