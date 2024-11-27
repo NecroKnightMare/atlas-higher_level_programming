@@ -14,6 +14,10 @@ request(url, (err, response, body) => {
     const tasks = JSON.parse(body).results;
     const completedTasks = {};
 
+    if (!Array.isArray(tasks)) {
+      throw new Error('Error');
+    }
+
     tasks.forEach((task) => {
       if (task.completed) {
         if (completedTasks[task.userId]) {
