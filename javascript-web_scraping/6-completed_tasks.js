@@ -25,11 +25,11 @@ request(url, (err, response, body) => {
     }
   }
 
-  Object.keys(completedTasks).forEach(userId => {
-    if(completedTasks[userId] === 0) {
-      delete completedTasks[userId];
-    }
-  });
+  // Object.keys(completedTasks).forEach(userId => {
+  //   if(completedTasks[userId] === 0) {
+  //     delete completedTasks[userId];
+  //   }
+  // });
 
   const sortedKeys = Object.keys(completedTasks).sort((a, b) => parseInt(a) - parseInt(b));
 
