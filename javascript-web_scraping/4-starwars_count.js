@@ -16,10 +16,12 @@ request(movie, (err, response, body) => {
   let count = 0;
 
   films.forEach((film) => {
-    if (film.characters.includes(url)) {
+    film.characters.forEach((characterUrl) => {
+      if (characterUrl.includes(url)) {
     count++;
-    }
+      }
+    });
   });
-// grab count of wedge Antilles movies that are present
+    // grab count of wedge Antilles movies that are present
   console.log(count);
 });
