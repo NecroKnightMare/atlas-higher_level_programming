@@ -12,20 +12,16 @@ request(movie, (err, response, body) => {
     console.error(err);
     return;
   }
-//   const films = JSON.parse(body).results;
-//   let count = 0;
+  const films = JSON.parse(body).results;
+  let count = 0;
 
-//   films.forEach((film) => {
-//     film.characters.forEach((characterUrl) => {
-//       if (characterUrl.includes(url)) {
-//     count++;
-//       }
-//     });
-//   });
-//     // grab count of wedge Antilles movies that are present
-//   console.log(count);
-// });
-  const characterData = JSON.parse(data);
-  const filmUrls = characterData.films;
-  console.log(filmUrls.length);
+  films.forEach((film) => {
+    film.characters.forEach((characterUrl) => {
+      if (characterUrl.includes(url)) {
+    count++;
+      }
+    });
+  });
+    // grab count of wedge Antilles movies that are present
+  console.log(count);
 });
