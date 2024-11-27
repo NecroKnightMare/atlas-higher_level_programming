@@ -11,15 +11,15 @@ request(url, (err, response, body) => {
     return;
   }
   if (response.statusCode === 200) {
-    const taskList = JSON.parse(body);
+    const taskLists = JSON.parse(body);
     const completedTasks = {};
 
-    taskList.forEach((task) => {
-      if (task.completedTasks) {
+    taskLists.forEach((task) => {
+      if (task.completed) {
         if (!completedTasks[task.userId]) {
-          completedTasks[task.user.Id] = 0;
+          completedTasks[task.userId] = 0;
         }
-        completedTasks++;
+        completedTasks[task.userId]++;
       }
     });
     console.log(completedTasks);
