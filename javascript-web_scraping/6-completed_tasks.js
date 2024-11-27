@@ -1,7 +1,6 @@
 #!/usr/bin/node
 // Write a script that computes the number of tasks completed by user id
 const request = require('request');
-const process = require('process');
 // 
 const url = process.argv[2];
 // The first argument is the API URL:
@@ -15,9 +14,9 @@ request(url, (err, response, body) => {
   const completedTasks = {};
 
   tasks.forEach((task) => {
-    if (task.completed) {
+    if (task.completed === true) {
       const userId = task.userId.toString();
-      if (!completedTasks[userId]) {
+      if (completedTasks[userId] === undefined) {
       completedTasks[userId] = 1;
       } else {
       completedTasks[userId]++;
