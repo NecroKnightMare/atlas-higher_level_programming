@@ -33,6 +33,6 @@ request(url, (err, response, body) => {
 
   const sortedKeys = Object.keys(completedTasks).sort((a, b) => parseInt(a) - parseInt(b));
 
-  const output = sortedKeys.map(userId => `'${userId}': ${completedTasks[userId]}`).join(', ');
-  console.log(`{ ${output} }`);
+  const output = sortedKeys.map(userId => ` '${userId}': ${completedTasks[userId]}`).join(',\n');
+  console.log(`{\n${output}\n}`);
 });
