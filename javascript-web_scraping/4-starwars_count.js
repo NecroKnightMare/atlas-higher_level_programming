@@ -17,7 +17,7 @@ request(movie, (err, response, body) => {
 
   films.forEach((film) => {
     film.characters.forEach((characterUrl) => {
-      if (url.includes(`/people/${wedgeAntillesId}`)) {
+      if (characterUrl.includes(url)) {
     count++;
       }
     });
