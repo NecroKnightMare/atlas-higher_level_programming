@@ -13,16 +13,17 @@ request(url, (err, response, body) => {
   const tasks = JSON.parse(body).results;
   const completedTasks = {};
 
-  tasks.forEach((task) => {
-    if (task.completed === true) {
+  for (let i = 0; i < tasks.length; i++) {
+    const task = tasks[i];
+    if (task.completed) {
       const userId = task.userId.toString();
-      if (completedTasks[userId] === undefined) {
+      if (!completedTasks[userId]) {
       completedTasks[userId] = 1;
       } else {
       completedTasks[userId]++;
       }
     }
-  });
+  }
 
   Object.keys(completedTasks).forEach(userId => {
     if(completedTasks[userId] === 0) {
